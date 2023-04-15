@@ -1,0 +1,92 @@
+// Css para el navbar
+@import '../../styles/mixings';
+@import '../../styles/variables';
+
+nav {
+    margin-left: $marginCenter;
+    margin-right: $marginCenter;
+    padding: $paddingNav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .img-menu {
+        width: 50px;
+        height: 50px;
+
+        img {
+            min-width: 50px;
+        }
+    }
+
+    .options-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: right;
+
+        li {
+            min-width: $minWidthLi;
+            text-align: center;
+            font-family: $fontFamilyBarlowCondensed;
+            font-weight: 700;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .li-divider {
+            color: $color-Grayish-blue;
+            font-size: 20px;
+        }
+
+        .li-login {
+            color: $color-Dark-Grayish-Blue;
+            transition: opacity 0.3s ease;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .icono-menu {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+    }
+
+    @include media-mobile {
+        // background: rebeccapurple;
+        margin-left: $marginCenterMobile;
+        margin-right: $marginCenterMobile;
+
+        .icono-menu {
+            display: block;
+        }
+
+        
+        .options-menu {
+            position: fixed;
+            min-height: 100vh;
+            bottom: 0;
+            right: -350px;
+            width: 300px;
+            flex-direction: column;
+            padding-top: 70px;
+            background: White;
+            transition: right 0.3s ease-in-out;
+            
+            li {
+                padding: 20px 0;
+            }
+
+        }
+        
+        // Clase para mostrar u ocultar el menu
+        .view-menu {
+            right: 0px;
+        }
+    }
+}

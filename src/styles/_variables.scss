@@ -1,0 +1,19 @@
+// Fuentes
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+$fontFamilyBarlowCondensed: 'Barlow Condensed', sans-serif;
+$fontFamilyBarlow: 'Barlow', sans-serif;
+
+// Colores
+$color-Red: hsl(0, 100%, 68%);
+$color-Very-Dark-Blue: hsl(230, 29%, 20%);
+$color-Dark-Grayish-Blue: hsl(230, 11%, 40%);
+$color-Grayish-blue: hsl(231, 7%, 65%);
+$color-Light-Grayish-Blue: hsl(207, 33%, 95%);
+
+// Margenes y demás
+$marginCenter: 10%;
+$marginCenterMobile: 3%;
+$paddingNav: 30px 10px;
+$minWidthLi: 150px;

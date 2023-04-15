@@ -1,0 +1,152 @@
+// Css para el componente body
+@import '../../styles//variables';
+@import '../../styles/mixings';
+
+
+.section-project {
+    margin-left: $marginCenter;
+    display: flex;
+    height: 480px;
+    gap: 10px;
+
+    .section-one {
+        min-width: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 1px;
+        min-height: 480px;
+        order: 1;
+
+
+        .header-section {
+            display: flex;
+            align-items: center;
+
+            div {
+                background: $color-Very-Dark-Blue;
+                color: white;
+                font-weight: 700;
+                padding: 5px 12px;
+                border-radius: 25px;
+                margin-right: 25px;
+                border: none;
+            }
+
+            p {
+                letter-spacing: 2px;
+                color: $color-Grayish-blue;
+                opacity: 0.8;
+            }
+        }
+
+        .body-section {
+            display: flex;
+            flex-direction: column;
+            
+            .title-dashboard {
+                color: $color-Very-Dark-Blue;
+                font-weight: bold;
+                font-size: 5rem;
+                font-family: $fontFamilyBarlowCondensed;
+                margin-bottom: 20px;
+            }
+
+            .paragraph-dashboard {
+                color: $color-Grayish-blue;
+                font-size: 1rem;
+            }
+
+        }
+
+        .footer-section {
+            display: flex;
+            align-items: center;
+
+            button {
+                padding: 20px 30px;
+                background-color: $color-Red;
+                color: white;
+                font-weight: bold;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: opacity 0.3s ease;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            p {
+                color: $color-Grayish-blue;
+                letter-spacing: 3px;
+                margin-left: 30px;
+            }
+        }
+
+    }
+
+
+    .section-two {
+        background-image: url("Images/illustration-devices.svg");
+        background-repeat: no-repeat;
+        min-height: 400px;
+        // min-width: 400px;
+        flex: 1;
+        order: 2;
+    }
+
+    @include media-mobile {
+        // background-color: brown;
+        margin-left: $marginCenterMobile;
+        flex-direction: column;
+        width: 100%;
+
+
+        .section-one {
+            order: 2;
+            min-height: 350px;
+
+            .body-section {
+                
+                .title-dashboard {
+                    font-size: 3rem;
+                }
+    
+                .paragraph-dashboard {
+                    font-size: 0.8rem;
+                }
+    
+            }
+
+            .footer-section {
+   
+                button {
+                    width: 150px;
+                    padding: 15px 0px;
+                    font-size: 14px;
+                    transition: opacity 0.3s ease;
+    
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+    
+                p {
+                    letter-spacing: 1px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    
+        .section-two {
+            order: 1;
+            margin-bottom: 50px;
+        }
+
+    }
+
+
+}
