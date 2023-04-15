@@ -98,6 +98,8 @@
         order: 2;
     }
 
+    // Media queries
+
     @include media-mobile {
         // background-color: brown;
         margin-left: $marginCenterMobile;
@@ -144,6 +146,8 @@
         .section-two {
             order: 1;
             margin-bottom: 50px;
+            max-height: 180px;
+            background-size: cover;
         }
 
     }
